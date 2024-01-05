@@ -1,0 +1,8 @@
+<p>Is it a Mobile {{ isMobile }}</p>
+<p>Is it a Tablet {{ isTablet }}</p>
+<p>Is it a Desktop {{ isDesktop }}</p>
+<p>The type of device is {{ getDeviceType }}</p>
+
+<div *ngFor="let item of getDeviceInfo | keyvalue">
+  Key: <b>{{ item.key }}</b> and Value: <b>{{ item.value }}</b>
+</div>
