@@ -7,9 +7,19 @@ import { HelloComponent } from './hello/hello.component';
 import { HeaderComponent } from './header/header.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
+import { AngularDeviceInformationService } from 'angular-device-information'; //New Line
+import { DeviceComponent } from './device/device.component';
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, NavbarComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  providers: [AngularDeviceInformationService],
+  declarations: [
+    AppComponent,
+    HelloComponent,
+    HeaderComponent,
+    NavbarComponent,
+    DeviceComponent,
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
